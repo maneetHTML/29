@@ -1,9 +1,15 @@
 import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-def area_of_circle(radius):
-    return math.pi * radius ** 2
+    def area(self):
+        return math.pi * (self.radius ** 2)
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
 
 # Example usage:
-radius =int(input("enter the number : "))
-area = area_of_circle(radius)
-print(f"The area of the circle and the perimeter is  {area:.2f}and perimeter is")
+circle = Circle(5)
+print(circle.area())
+print(circle.perimeter())
